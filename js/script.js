@@ -152,7 +152,6 @@ function tagClickHandler(event) {
     /* remove class active */
     tagActiveLinks.classList.remove("active");
   }
-  console.log("removed active" + tagActiveLinks);
   /* END LOOP: for each active tag link */
   /* find all tag links with "href" attribute equal to the "href" constant */
   const Taglinks = document.querySelectorAll('a[href="' + tag + '"]');
@@ -244,11 +243,11 @@ function authorClickHandler(event) {
   console.log(author);
   /* find all author links with class active */
   const authorActiveLinks = document.querySelectorAll("active");
-
+  const articles = document.querySelectorAll(".post");
   // /* START LOOP: for each active author link */
-  for (let authorActiveLink of authorActiveLinks) {
+  for (let authorActiveLinks of articles) {
     //   //   /* remove class active */
-    authorActiveLink.classList.remove("active");
+    authorActiveLinks.classList.remove("active");
   }
 
   /* END LOOP: for each active tag link */
