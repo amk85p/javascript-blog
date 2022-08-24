@@ -1,13 +1,18 @@
-@import url("https://fonts.googleapis.com/css?family=Oswald:400,600|Sacramento|Source+Sans+Pro:300&subset=latin-ext");
+@import url('https://fonts.googleapis.com/css?family=Oswald:400,600|Sacramento|Source+Sans+Pro:300&subset=latin-ext');
 
 /* Variables */
 
 $color-light: #fff;
 $color-dark: #444;
+$color-green: rgb(82, 235, 184);
+$color-link: rgb(29, 94, 72);
+$color-size5: rgb(48, 107, 83);
+$color-size4: rgb(63, 119, 97);
+$color-size3: rgb(90, 143, 122);
 
-$font-logo: "Sacramento", cursive;
-$font-header: "Oswald", sans-serif;
-$font-text: "Source Sans Pro", sans-serif;
+$font-logo: 'Sacramento', cursive;
+$font-header: 'Oswald', sans-serif;
+$font-text: 'Source Sans Pro', sans-serif;
 
 /* Global */
 
@@ -63,8 +68,8 @@ body {
   background: $color-light;
   margin-right: 10px;
   padding: 40px;
-  border: 1px solid $color-dark;
   border-radius: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
 }
 
 /* Logo */
@@ -100,6 +105,13 @@ body {
   li {
     margin-bottom: 12px;
   }
+  a {
+    text-decoration: none;
+    color: $color-link;
+  }
+  a:hover {
+    color: $color-green;
+  }
 }
 
 /* Post */
@@ -112,12 +124,78 @@ body {
 }
 
 .post-author {
-  font-style: italic;
+  font-weight: 700;
+  a {
+    text-decoration: none;
+    color: $color-link;
+  }
+  a:hover {
+    color: $color-green;
+  }
 }
 
 .post-tags {
   display: flex;
   p {
     margin: 0 10px 0 0;
+  }
+  a {
+    text-decoration: none;
+    color: $color-link;
+  }
+  a:hover {
+    color: $color-green;
+  }
+}
+
+.titles {
+  font-weight: 500;
+  a {
+    text-decoration: none;
+    color: $color-link;
+  }
+  a:hover {
+    color: $color-green;
+  }
+}
+
+.tags {
+  font-weight: 700;
+  display: flex;
+  flex-wrap: wrap;
+
+  a {
+    text-decoration: none;
+    margin-right: 10px;
+    text-align: center;
+    line-height: 1;
+  }
+  a:hover {
+    color: $color-green;
+  }
+  .tag-size-5 {
+    color: $color-size5;
+    font-size: 35px;
+  }
+  .tag-size-4 {
+    color: $color-size4;
+    font-size: 30px;
+    // line-height: 2;
+  }
+  .tag-size-3 {
+    color: lighten($color-size3, 10%);
+    font-size: 25px;
+    // line-height: 2.5;
+  }
+  .tag-size-2 {
+    color: lighten($color-size5, 20%);
+    font-size: 20px;
+    // line-height: 2.8;
+  }
+
+  .tag-size-1 {
+    color: lighten($color-size5, 40%);
+    font-size: 15px;
+    // line-height: 5;
   }
 }

@@ -159,7 +159,7 @@ function generateTags() {
       html = html + ' ' + linkHTML;
 
       /* [NEW] check if this link is NOT already in allTags */
-      if (!allTags.hasOwnProperty(tag)) {
+      if (!allTags[tag]) {
         /*[NEW] add tag to allTags object*/
         allTags[tag] = 1;
       } else {
